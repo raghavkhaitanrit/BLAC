@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Policy>
+<PseudoRole> 
+    <Department> Billing </Department>
+    <Provider> Accountant </Provider>
+    <Location> 192.168.1.1 </Location>
+    <Relationship> Or,And </Relationship>  	
+</PseudoRole>
+	<Rule>
+	<Subject> "any" </Subject>
+	<Object>"object.doctor-id = subject.id"</Object>
+	<Action>"action.type = "read" action.type = "view""</Action>
+	<Environment>"environment.mode = "normal""</Environment>
+	</Rule>
+	<Rule>
+	<Subject> "any" </Subject>
+	<Object>"any"</Object>
+	<Action>"action.type = "read" action.type = "view""</Action>
+	<Environment>"environment.mode = "normal""</Environment>
+	</Rule>
+</Policy>
